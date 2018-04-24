@@ -1,0 +1,104 @@
+:root {
+  --height: 40px;
+  --button-radius: 5px;
+
+  --accent: #3f51b5;
+  --main: white;
+  --text: #333;
+}
+
+.button {
+  background-color: pink;
+  text-decoration: none;
+  padding: 0 20px;
+  border-radius: 5px;
+  color: white;
+  
+  
+  height: var(--height);
+  line-height: var(--height);
+  display:inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color .3s ease-in-out;
+}
+
+.button:hover {
+  background-color: green;
+}
+.button:visited {
+  color: white;
+}
+
+.button:active {
+  transform:translateY(200px);
+}
+
+.button--secondary {
+  height: calc(40px / 2);
+  line-height: calc(40px / 2);
+  
+}
+
+.heading {
+  /* wpisz odpowiednie style */
+}
+
+.panel {
+  width:-moz-fit-content;
+  background-color: lavender;
+  padding: 1em;
+  border-radius: 5px; 
+}
+
+.panel + .panel {
+  margin-top: 20px;
+}
+
+.panel__list {
+list-style: none;
+padding: 0;
+margin: 0;
+
+display: flex;
+flex-direction: column;
+}
+
+.panel__item + .panel__item {
+margin-top: 20px;
+
+}
+
+.panel__title {
+margin: 0px;
+
+}
+
+.panel__text {
+ margin-top: 10px;
+
+}
+
+.panel__actions {
+
+}
+
+.panel__action + .panel__action {
+  /* wpisz odpowiednie style */
+}
+
+@media (min-width: 820px) {
+  .panel__list,
+  .panel__actions {
+    flex-direction: row;
+  }
+
+  .panel__item + .panel__item {
+    margin-left:30px;
+    margin-top: 0;
+  }
+
+  .panel__action + .panel__action {
+   /* wpisz odpowiednie style */
+  }
+}
